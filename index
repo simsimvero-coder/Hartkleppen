@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aortaklepvervanging — Medische Onderwijsinfographic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blood:     #9B1C1C;
+  --blood-mid: #C0392B;
+  --blood-lt:  #E74C3C;
+  --crimson:   #7B0D1E;
+  --navy:      #0D1B2A;
+  --navy-mid:  #1B2A3B;
+  --navy-lt:   #243447;
+  --slate:     #2C3E50;
+  --teal:      #0E6B7C;
+  --teal-lt:   #1A8FA3;
+  --gold:      #D4A017;
+  --gold-lt:   #F0C040;
+  --sage:      #2D6A4F;
+  --sage-lt:   #52B788;
+  --lavender:  #6B3FA0;
+  --lav-lt:    #9B6DCA;
+  --cream:     #FBF7F0;
+  --warm-gray: #E8E0D5;
+  --text-main: #1A1209;
+  --text-muted:#5C5048;
+  --text-lt:   #8A7D70;
+  --white:     #FFFFFF;
+  --ff-display: 'Playfair Display', Georgia, serif;
+  --ff-body:    'Source Serif 4', Georgia, serif;
+  --ff-mono:    'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-body);
+  background: var(--cream);
+  color: var(--text-main);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ── UTILITIES ─────────────────────────────────────────── */
+.section-label {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-lt);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.pull-quote {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--blood-mid);
+  border-left: 3px solid var(--blood-mid);
+  padding: 0.5rem 0 0.5rem 1.4rem;
+  margin: 1.5rem 0;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.callout-box {
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(155,28,28,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 10% 80%, rgba(14,107,124,0.1) 0%, transparent 45%);
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 3rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--blood-lt);
+  margin-bottom: 1.2rem;
+}
+
+header h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+header h1 em {
+  font-style: italic;
+  color: #F2A0A0;
+}
+
+.header-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+.header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: right;
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+}
+
+.header-stat {
+  font-family: var(--ff-display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--blood-lt);
+  line-height: 1;
+}
+
+/* ── NAV TABS ────────────────────────────────────────────── */
+nav {
+  background: var(--navy-mid);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow-x: auto;
+  gap: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.85rem 1.2rem;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+nav a:hover { color: var(--white); border-color: var(--blood-lt); }
+
+/* ── MAIN CONTAINER ─────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--warm-gray);
+}
+
+section h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0.8rem 0 1.5rem;
+}
+
+section h3 {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.7rem;
+}
+
+section p {
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+}
+
+/* ── SECTION 1: ANATOMIE ─────────────────────────────────── */
+#anatomie { background: var(--cream); }
+
+.heart-diagram {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin: 2rem 0;
+  align-items: start;
+}
+
+.valve-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.valve-card {
+  border: 1px solid var(--warm-gray);
+  border-radius: 8px;
+  padding: 1.2rem;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+.valve-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.valve-card.aorta::before { background: var(--blood-mid); }
+.valve-card.mitraal::before { background: var(--teal); }
+.valve-card.pulmonaal::before { background: var(--sage); }
+.valve-card.tricuspidaal::before { background: var(--lavender); }
+
+.valve-card .valve-name {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+.valve-card .valve-type {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-lt);
+  margin-bottom: 0.7rem;
+}
+.valve-card p { font-size: 0.87rem; color: var(--text-muted); margin: 0; }
+
+/* SVG heart */
+.heart-svg-wrap {
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cardiac cycle pressure diagram */
+.pressure-diagram {
+  background: var(--navy);
+  border-radius: 10px;
+  padding: 2rem;
+  color: var(--white);
+  margin: 2rem 0;
+}
+
+.pressure-diagram h3 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cycle-phases {
+  display: flex;
+  gap: 0;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.phase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.phase-iso-c    { background: #4A235A; flex: 1; }
+.phase-ejection { background: var(--blood-mid); flex: 3; }
+.phase-iso-r    { background: #1A5276; flex: 1; }
+.phase-fill     { background: var(--teal); flex: 3; }
+
+.valve-state-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+}
+.valve-state-label {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  width: 120px;
+  flex-shrink: 0;
+}
+.valve-states {
+  display: flex;
+  flex: 1;
+  gap: 0;
+  height: 28px;
+}
+.vs { display: flex; align-items: center; justify-content: center; font-size: 9px; font-family: var(--ff-mono); }
+.vs.open  { background: rgba(82,183,136,0.4); color: #52B788; }
+.vs.closed{ background: rgba(155,28,28,0.3); color: #F2A0A0; }
+.vs-1 { flex: 1; } .vs-3 { flex: 3; }
+
+/* ── SECTION 2: FYSIOLOGIE ──────────────────────────────── */
+#fysiologie { background: #F5F0E8; }
+
+.pressure-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin: 1.2rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.pressure-table th {
+  background: var(--navy);
+  color: rgba(255,255,255,0.85);
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.7rem 1rem;
+  text-align: left;
+}
+.pressure-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--warm-gray);
+  vertical-align: top;
+}
+.pressure-table tr:last-child td { border-bottom: none; }
+.pressure-table tr:nth-child(even) td { background: #FAFAF8; }
+.num { font-family: var(--ff-mono); color: var(--blood-mid); font-weight: 700; }
+
+/* Frank-Starling */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; margin: 1.5rem 0; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; align-items: start; margin: 1.5rem 0; }
+
+/* ── SECTION 3: PATHOLOGIE ───────────────────────────────── */
+#pathologie { background: var(--cream); }
+
+.pathology-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.path-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.path-card-header {
+  padding: 1.4rem 1.6rem 1rem;
+  color: white;
+}
+.stenose .path-card-header { background: linear-gradient(135deg, var(--blood) 0%, var(--blood-mid) 100%); }
+.insuff .path-card-header  { background: linear-gradient(135deg, #1A3A6B 0%, var(--teal) 100%); }
+
+.path-card-header .path-title {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.path-card-header .path-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.path-card-body { padding: 1.4rem 1.6rem; }
+
+.path-mechanism {
+  background: #F8F5F0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+}
+.path-mechanism strong { display: block; font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-lt); margin-bottom: 4px; }
+
+.severity-bar {
+  display: flex;
+  gap: 4px;
+  margin: 0.8rem 0;
+}
+.sev-item {
+  flex: 1;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.5rem 0.2rem;
+  font-family: var(--ff-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.05em;
+}
+.sev-mild   { background: #D4EDDA; color: #155724; }
+.sev-mod    { background: #FFF3CD; color: #856404; }
+.sev-severe { background: #F8D7DA; color: var(--blood); }
+
+.aortic-gradient-viz {
+  margin: 1rem 0;
+  background: var(--navy);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  color: white;
+}
+.gradient-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0.6rem 0;
+  font-size: 0.85rem;
+}
+.gradient-bar-wrap { position: relative; height: 16px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+.gradient-bar { height: 100%; border-radius: 3px; transition: width 0.3s; }
+.label-mono { font-family: var(--ff-mono); font-size: 9px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; white-space: nowrap; }
+.val-mono { font-family: var(--ff-mono); font-size: 10px; font-weight: 700; white-space: nowrap; }
+
+/* Symptomen triad */
+.symptom-triad {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.symptom-item {
+  flex: 1;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-top: 4px solid;
+}
+.symptom-item:nth-child(1) { border-color: var(--blood-mid); }
+.symptom-item:nth-child(2) { border-color: var(--gold); }
+.symptom-item:nth-child(3) { border-color: var(--lavender); }
+.symptom-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.symptom-name { font-family: var(--ff-display); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+.symptom-desc { font-size: 0.82rem; color: var(--text-muted); }
+.survival-bar { margin-top: 0.6rem; font-family: var(--ff-mono); font-size: 10px; }
+
+/* ── SECTION 4: INDICATIES ──────────────────────────────── */
+#indicaties { background: #EEF4F0; }
+
+.indication-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.indication-card {
+  border: 1.5px solid;
+  border-radius: 8px;
+  padding: 1.1rem;
+  font-size: 0.88rem;
+}
+.indication-card .ind-class {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.indication-card .ind-title {
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.indication-card p { font-size: 0.84rem; color: var(--text-muted); margin: 0; }
+
+.ind-ia  { border-color: var(--blood-mid); background: #FEF5F5; }
+.ind-ia .ind-class { color: var(--blood-mid); }
+.ind-iib { border-color: var(--gold); background: #FFFBF0; }
+.ind-iib .ind-class { color: var(--gold); }
+.ind-iii { border-color: var(--teal); background: #F0FBFC; }
+.ind-iii .ind-class { color: var(--teal); }
+
+/* ── SECTION 5: KLEPKEUZE ───────────────────────────────── */
+#klepkeuze { background: var(--cream); }
+
+.prosthesis-compare {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 0;
+  margin: 2rem 0;
+  align-items: stretch;
+}
+.pros-col {
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.pros-header {
+  padding: 1.4rem 1.6rem;
+  color: white;
+}
+.pros-header.mech { background: linear-gradient(135deg, #1A3A6B, #2C5F8A); }
+.pros-header.bio  { background: linear-gradient(135deg, var(--sage), #3A8C6E); }
+.pros-header .pros-name { font-family: var(--ff-display); font-size: 1.4rem; font-weight: 700; }
+.pros-header .pros-sub  { font-size: 0.82rem; opacity: 0.8; }
+.pros-body { padding: 1.4rem 1.6rem; }
+.pros-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-lt);
+}
+
+.pros-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #F2EDE6;
+  font-size: 0.87rem;
+}
+.pros-row:last-child { border-bottom: none; }
+.pros-row-label { font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-lt); min-width: 90px; padding-top: 2px; }
+.pros-row-val { flex: 1; color: var(--text-main); }
+.pros-row-val strong { color: var(--blood-mid); }
+
+.decision-tree {
+  background: var(--navy);
+  border-radius: 10px;
+  padding: 2rem;
+  color: white;
+  margin: 2rem 0;
+}
+.decision-tree h3 { color: white; margin-bottom: 1.5rem; }
+.dt-row {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  gap: 1rem;
+  font-size: 0.88rem;
+}
+.dt-row:last-child { border-bottom: none; }
+.dt-age { font-family: var(--ff-display); font-size: 1.4rem; font-weight: 700; color: var(--gold-lt); min-width: 80px; }
+.dt-choice { flex: 1; }
+.dt-reason { color: rgba(255,255,255,0.5); font-size: 0.82rem; font-style: italic; }
+
+/* Types table */
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+.type-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  font-size: 0.85rem;
+}
+.type-card .type-name { font-family: var(--ff-display); font-weight: 700; margin-bottom: 0.3rem; font-size: 0.95rem; }
+.type-card .type-example { font-family: var(--ff-mono); font-size: 9px; color: var(--text-lt); letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.type-card p { font-size: 0.82rem; color: var(--text-muted); margin: 0; }
+
+/* ── SECTION 6: HLM ─────────────────────────────────────── */
+#hlm { background: #F0F5FB; }
+
+.hlm-circuit {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: center;
+  margin: 2rem 0;
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+}
+
+.hlm-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hlm-component {
+  background: rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid;
+}
+.hlm-component .comp-name { font-family: var(--ff-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+.hlm-component .comp-func { font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+.hlm-component.venous   { border-color: #4A90D9; }
+.hlm-component.arterial { border-color: var(--blood-lt); }
+.hlm-component.oxyg     { border-color: var(--sage-lt); }
+.hlm-component.pump     { border-color: var(--gold); }
+.hlm-component.heat     { border-color: var(--lav-lt); }
+.hlm-component.filter   { border-color: var(--teal-lt); }
+.hlm-component.field    { border-color: rgba(255,255,255,0.3); }
+
+.hlm-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.hlm-machine-box {
+  background: rgba(255,255,255,0.05);
+  border: 2px dashed rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+}
+
+.hlm-params {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.hlm-param {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+}
+.hlm-param .param-val { font-family: var(--ff-display); font-size: 1.8rem; font-weight: 700; color: var(--navy); }
+.hlm-param .param-unit { font-family: var(--ff-mono); font-size: 9px; color: var(--text-lt); letter-spacing: 0.1em; }
+.hlm-param .param-name { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+
+/* ── SECTION 7: CARDIOPLEGIE ─────────────────────────────── */
+#cardioplegie { background: var(--cream); }
+
+.cardio-mech {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.mech-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+.mech-header { padding: 1.2rem 1.4rem; color: white; font-family: var(--ff-display); font-size: 1.15rem; font-weight: 700; }
+.mech-header.kalium { background: linear-gradient(135deg, #4A235A, var(--lavender)); }
+.mech-header.koude  { background: linear-gradient(135deg, #104E8B, var(--teal)); }
+.mech-body { padding: 1.2rem 1.4rem; font-size: 0.88rem; }
+.mech-body p { margin-bottom: 0.7rem; }
+
+.cardio-types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.cardio-type {
+  border-radius: 8px;
+  padding: 1.2rem;
+  background: white;
+  border: 1px solid var(--warm-gray);
+}
+.cardio-type .ct-name { font-family: var(--ff-display); font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+.cardio-type .ct-sub  { font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.1em; color: var(--text-lt); margin-bottom: 0.7rem; }
+.cardio-type p { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
+
+.del-strategy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.del-card { background: white; border-radius: 8px; padding: 1.1rem 1.3rem; border-left: 4px solid; box-shadow: 0 1px 5px rgba(0,0,0,0.05); }
+.del-card.anterograde { border-color: var(--blood-mid); }
+.del-card.retrograde  { border-color: var(--teal); }
+.del-card .del-name { font-family: var(--ff-display); font-weight: 700; margin-bottom: 0.5rem; }
+.del-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+
+/* ── SECTION 8: OPERATIE ─────────────────────────────────── */
+#operatie { background: #F5F0E8; }
+
+.op-timeline {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.timeline-bar {
+  position: absolute;
+  left: 32px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blood-mid), var(--teal));
+}
+
+.op-step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+.op-step-num {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.op-step-body {
+  background: white;
+  border-radius: 10px;
+  padding: 1.3rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.op-step-body .step-name { font-family: var(--ff-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.3rem; }
+.op-step-body .step-time {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-lt);
+  margin-bottom: 0.8rem;
+}
+.op-step-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.op-step-body p:last-child { margin-bottom: 0; }
+
+.step-detail {
+  background: #F8F5F0;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-top: 0.8rem;
+  border-left: 3px solid var(--warm-gray);
+}
+.step-detail strong { color: var(--text-main); }
+
+/* ── SECTION 9: TAVI ─────────────────────────────────────── */
+#tavi { background: var(--cream); }
+
+.tavi-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.tavi-card { background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+.tavi-card h3 { font-size: 1.05rem; margin-bottom: 0.7rem; color: var(--navy); }
+.tavi-card p { font-size: 0.86rem; color: var(--text-muted); }
+
+.risk-scores {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.risk-score-card {
+  flex: 1;
+  min-width: 160px;
+  background: var(--navy);
+  color: white;
+  border-radius: 8px;
+  padding: 1.1rem;
+}
+.risk-score-card .rs-name { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.1em; margin-bottom: 4px; color: rgba(255,255,255,0.5); }
+.risk-score-card .rs-title { font-family: var(--ff-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.risk-score-card p { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin: 0; }
+
+/* ── SECTION 10: COMPLICATIES ───────────────────────────── */
+#complicaties { background: #F5F0E8; }
+
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.comp-card {
+  border-radius: 8px;
+  padding: 1.1rem;
+  background: white;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  border-top: 3px solid;
+  font-size: 0.86rem;
+}
+.comp-card .comp-name { font-family: var(--ff-display); font-weight: 700; margin-bottom: 0.4rem; }
+.comp-card .comp-pct { font-family: var(--ff-mono); font-size: 11px; font-weight: 700; margin-bottom: 0.5rem; }
+.comp-card p { color: var(--text-muted); font-size: 0.82rem; margin: 0; }
+
+/* ── SECTION 11: CASUS ──────────────────────────────────── */
+#casus { background: var(--navy); color: white; }
+
+#casus h2 { color: white; }
+#casus .section-label { color: rgba(255,255,255,0.4); }
+#casus .section-label::after { background: rgba(255,255,255,0.2); }
+#casus p { color: rgba(255,255,255,0.75); }
+
+.casus-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
+.casus-box h3 { color: var(--gold-lt); margin-bottom: 1rem; }
+.casus-data {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 1.5rem;
+  font-size: 0.88rem;
+}
+.cd-label { font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); padding-top: 3px; }
+.cd-val { color: rgba(255,255,255,0.9); }
+
+.casus-questions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.cq {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 1.2rem;
+  border-top: 3px solid;
+}
+.cq:nth-child(1) { border-color: var(--blood-lt); }
+.cq:nth-child(2) { border-color: var(--gold-lt); }
+.cq:nth-child(3) { border-color: var(--teal-lt); }
+.cq .cq-num { font-family: var(--ff-display); font-size: 2rem; font-weight: 700; opacity: 0.3; }
+.cq .cq-q { font-family: var(--ff-display); font-size: 1.05rem; font-weight: 700; color: white; margin: 0.3rem 0 0.6rem; }
+.cq p { font-size: 0.83rem; color: rgba(255,255,255,0.55); margin: 0; }
+
+.casus-answer {
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-left: 3px solid var(--blood-lt);
+}
+.casus-answer .ans-label { font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blood-lt); margin-bottom: 0.7rem; }
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+footer {
+  background: var(--navy-mid);
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  padding: 2rem;
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header-grid { grid-template-columns: 1fr; }
+  .heart-diagram, .pathology-compare, .prosthesis-compare,
+  .cardio-mech, .two-col, .three-col, .indication-grid,
+  .comp-grid, .casus-questions, .tavi-compare, .del-strategy,
+  .cardio-types { grid-template-columns: 1fr; }
+  .valve-grid, .types-grid, .hlm-params { grid-template-columns: 1fr 1fr; }
+  .symptom-triad { flex-direction: column; }
+  .hlm-circuit { grid-template-columns: 1fr; }
+  .container { padding: 0 1.2rem; }
+  .pros-compare { grid-template-columns: 1fr; }
+}
+
+/* ── ANIMATIONS ─────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in {
+  animation: fadeSlideUp 0.5s ease-out both;
+}
+
+.heartbeat {
+  display: inline-block;
+  animation: heartbeat 1.4s ease-in-out infinite;
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.08); }
+  56% { transform: scale(1); }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════ -->
+<header>
+  <div class="header-bg-pattern"></div>
+  <div class="header-grid">
+    <div>
+      <div class="header-eyebrow">Cardiochirurgie · BKO Onderwijsmodule · Aortaklep</div>
+      <h1>De <em>aortaklep</em>vervanging:<br>van fysiologie tot OK</h1>
+      <p class="header-sub">Een complete onderwijsinfographic over hartklepanatomie, pathofysiologie van aortakleplijden, operatieve technieken, de hart-longmachine, cardioplegie en klepprothesen — voor een breed academisch publiek.</p>
+    </div>
+    <div class="header-meta">
+      <div class="header-stat">❤️</div>
+      <div>Cardiochirurgie</div>
+      <div>UMC</div>
+      <div style="margin-top:8px">Anatomie · Fysiologie</div>
+      <div>Pathologie · Chirurgie</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════
+     NAVIGATIE
+══════════════════════════════════════════════════════ -->
+<nav>
+  <ul>
+    <li><a href="#anatomie">01 Anatomie</a></li>
+    <li><a href="#fysiologie">02 Fysiologie</a></li>
+    <li><a href="#pathologie">03 Pathologie</a></li>
+    <li><a href="#indicaties">04 Indicaties</a></li>
+    <li><a href="#klepkeuze">05 Klepkeuze</a></li>
+    <li><a href="#hlm">06 HLM</a></li>
+    <li><a href="#cardioplegie">07 Cardioplegie</a></li>
+    <li><a href="#operatie">08 De operatie</a></li>
+    <li><a href="#tavi">09 TAVI</a></li>
+    <li><a href="#complicaties">10 Complicaties</a></li>
+    <li><a href="#casus">11 Casus</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     01 · ANATOMIE
+══════════════════════════════════════════════════════ -->
+<section id="anatomie">
+<div class="container">
+  <div class="section-label">01 — Anatomie van de hartkleppen</div>
+  <h2>Vier kleppen, één pomp.</h2>
+
+  <div class="heart-diagram">
+    <div>
+      <p>Het hart is een dubbele pomp met twee gescheiden circulaties. In elke helft zitten twee kleppen die samen éénrichtingsstroom garanderen: bloed kan alleen vooruit, nooit terug.</p>
+      <p>De kleppen bestaan uit dunne, flexibele <strong>slippen (cusps of leaflets)</strong>, opgehangen aan een fibreuze ring: de <strong>anulus</strong>. Ze openen en sluiten volledig passief — aangedreven door drukgradiënten, niet door spiercontractie.</p>
+
+      <div class="pull-quote">Hartkleppen zijn passieve structuren. Ze openen wanneer de druk vóór hen hoger is dan erachter, en sluiten zodra dit omkeert.</div>
+
+      <p>Structureel worden de kleppen in twee types verdeeld:</p>
+      <ul style="margin: 0.5rem 0 0.5rem 1.2rem; font-size:0.9rem; line-height:1.9; color:var(--text-muted);">
+        <li><strong>Atrioventriculaire (AV) kleppen</strong> — mitraal- en tricuspidaalklep — liggen tussen atrium en ventrikel en worden gefixeerd door chordae tendineae en papillairspieren om prolaps te voorkomen.</li>
+        <li><strong>Semilunaire kleppen</strong> — aorta- en pulmonaalklep — liggen aan de uitstroom van de ventrikels en hebben geen chordae; ze sluiten door de druk van het bloed dat terugstroomt.</li>
+      </ul>
+    </div>
+
+    <div>
+      <!-- SVG schematische hartdoorsnede -->
+      <div class="heart-svg-wrap">
+        <svg viewBox="0 0 360 380" width="340" height="360" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- Achtergrond -->
+          <rect width="360" height="380" fill="#0D1B2A" rx="8"/>
+
+          <!-- Labels boven -->
+          <text x="85" y="20" fill="rgba(255,255,255,0.4)" font-size="9" text-anchor="middle" letter-spacing="1">RECHTS</text>
+          <text x="275" y="20" fill="rgba(255,255,255,0.4)" font-size="9" text-anchor="middle" letter-spacing="1">LINKS</text>
+          <line x1="180" y1="10" x2="180" y2="370" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/>
+
+          <!-- Rechter atrium -->
+          <ellipse cx="90" cy="100" rx="65" ry="55" fill="#1B3A5C" stroke="#2C6FAC" stroke-width="1.5"/>
+          <text x="90" y="97" fill="rgba(255,255,255,0.7)" font-size="8.5" text-anchor="middle">Rechter</text>
+          <text x="90" y="110" fill="rgba(255,255,255,0.7)" font-size="8.5" text-anchor="middle">Atrium</text>
+
+          <!-- Linker atrium -->
+          <ellipse cx="270" cy="100" rx="65" ry="55" fill="#4A1515" stroke="#C0392B" stroke-width="1.5"/>
+          <text x="270" y="97" fill="rgba(255,255,255,0.7)" font-size="8.5" text-anchor="middle">Linker</text>
+          <text x="270" y="110" fill="rgba(255,255,255,0.7)" font-size="8.5" text-anchor="middle">Atrium</text>
+
+          <!-- Rechter ventrikel -->
+          <path d="M 30 175 Q 30 330 105 345 Q 150 355 160 280 Q 165 220 160 175 Z" fill="#1B3A5C" stroke="#2C6FAC" stroke-width="1.5"/>
+          <text x="90" y="270" fill="rgba(255,255,255,0.7)" font-size="8.5" text-anchor="middle">Rechter</text>
+          <text x="90" y="283" fill="rgba(255,255,255,0.7)" font-size="8.5" text-anchor="middle">Ventrikel</text>
+
+          <!-- Linker ventrikel (dikker septum) -->
+          <path d="M 200 175 Q 195 220 200 280 Q 210 355 255 345 Q 330 330 330 175 Z" fill="#4A1515" stroke="#C0392B" stroke-width="2"/>
+          <text x="270" y="270" fill="rgba(255,255,255,0.7)" font-size="8.5" text-anchor="middle">Linker</text>
+          <text x="270" y="283" fill="rgba(255,255,255,0.7)" font-size="8.5" text-anchor="middle">Ventrikel</text>
+
+          <!-- Septum -->
+          <line x1="160" y1="170" x2="200" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+          <line x1="158" y1="282" x2="202" y2="282" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+
+          <!-- TRICUSPIDAALKLEP -->
+          <ellipse cx="132" cy="172" rx="22" ry="8" fill="#6B3FA0" stroke="#9B6DCA" stroke-width="2"/>
+          <text x="58" y="168" fill="#9B6DCA" font-size="8" text-anchor="middle">Tricuspidaal</text>
+          <line x1="80" y1="168" x2="110" y2="170" stroke="#6B3FA0" stroke-width="1" stroke-dasharray="2,2"/>
+
+          <!-- MITRAALKLEP -->
+          <ellipse cx="228" cy="172" rx="20" ry="7" fill="#0E6B7C" stroke="#1A8FA3" stroke-width="2"/>
+          <text x="305" y="162" fill="#1A8FA3" font-size="8" text-anchor="middle">Mitraal</text>
+          <line x1="248" y1="169" x2="290" y2="163" stroke="#0E6B7C" stroke-width="1" stroke-dasharray="2,2"/>
+
+          <!-- PULMONAALKLEP (uitstroom rechts bovenin) -->
+          <path d="M 50 130 Q 60 110 80 105 Q 95 125 80 145 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <ellipse cx="88" cy="148" rx="18" ry="6" fill="#2D6A4F" stroke="#52B788" stroke-width="2" transform="rotate(-30,88,148)"/>
+          <text x="30" y="140" fill="#52B788" font-size="8" text-anchor="middle">Pulmonaal</text>
+
+          <!-- Pulmonaalarterie -->
+          <path d="M 80 130 Q 75 80 110 60" stroke="#52B788" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+          <text x="75" y="55" fill="#52B788" font-size="7.5" text-anchor="middle">A. pulmonalis</text>
+
+          <!-- AORTAKLEP (uitstroom links bovenin) — HIGHLIGHT -->
+          <ellipse cx="238" cy="148" rx="20" ry="7" fill="#9B1C1C" stroke="#E74C3C" stroke-width="2.5" transform="rotate(20,238,148)"/>
+          <!-- Glow effect aortaklep -->
+          <ellipse cx="238" cy="148" rx="26" ry="11" fill="none" stroke="#E74C3C" stroke-width="1" opacity="0.3" transform="rotate(20,238,148)"/>
+          <text x="318" y="135" fill="#E74C3C" font-size="8" text-anchor="middle" font-weight="bold">Aortaklep ★</text>
+          <line x1="292" y1="137" x2="258" y2="143" stroke="#9B1C1C" stroke-width="1" stroke-dasharray="2,2"/>
+
+          <!-- Aorta -->
+          <path d="M 258 130 Q 275 70 290 50 Q 310 30 330 40" stroke="#C0392B" stroke-width="2.5" fill="none"/>
+          <text x="315" y="45" fill="#C0392B" font-size="7.5" text-anchor="middle">Aorta</text>
+
+          <!-- Vena cava superior (rechts) -->
+          <line x1="55" y1="45" x2="70" y2="68" stroke="#2C6FAC" stroke-width="2"/>
+          <text x="40" y="40" fill="#2C6FAC" font-size="7" text-anchor="middle">V. cava sup.</text>
+
+          <!-- Longvenen (links) -->
+          <line x1="310" y1="65" x2="300" y2="88" stroke="#C0392B" stroke-width="1.5" stroke-dasharray="2,2"/>
+          <text x="328" y="60" fill="rgba(255,255,255,0.35)" font-size="7" text-anchor="middle">Longvenen</text>
+
+          <!-- Stroomrichtingspijlen -->
+          <!-- Rechts: blauw (veneus) -->
+          <path d="M 90 153 L 90 168" stroke="#4A90D9" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+          <path d="M 88 175 L 88 200" stroke="#4A90D9" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+
+          <!-- Links: rood (arterieel) -->
+          <path d="M 228 153 L 228 168" stroke="#C0392B" stroke-width="1.5" marker-end="url(#arr-red)"/>
+          <path d="M 226 175 L 226 200" stroke="#C0392B" stroke-width="1.5" marker-end="url(#arr-red)"/>
+
+          <defs>
+            <marker id="arr-blue" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#4A90D9"/>
+            </marker>
+            <marker id="arr-red" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#C0392B"/>
+            </marker>
+          </defs>
+
+          <!-- Legenda -->
+          <rect x="10" y="345" width="8" height="8" fill="#4A90D9" rx="1"/>
+          <text x="22" y="353" fill="rgba(255,255,255,0.5)" font-size="7.5">Veneus (O₂-arm)</text>
+          <rect x="120" y="345" width="8" height="8" fill="#C0392B" rx="1"/>
+          <text x="132" y="353" fill="rgba(255,255,255,0.5)" font-size="7.5">Arterieel (O₂-rijk)</text>
+          <rect x="240" y="345" width="8" height="8" fill="#E74C3C" rx="1"/>
+          <text x="252" y="353" fill="rgba(255,255,255,0.5)" font-size="7.5">Aortaklep (focus)</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="valve-grid">
+    <div class="valve-card aorta">
+      <div class="valve-name">Aortaklep</div>
+      <div class="valve-type">Semilunair · Links · 3 cusps</div>
+      <p>Ligt tussen linker ventrikel en aorta ascendens. Drie gelijke cusps (left, right, non-coronary). Direct boven de klep ontspringen de linker- en rechtercoronairarterie uit de sinus van Valsalva. Normaal klepoppervlak: <strong>2,5–3,5 cm²</strong>.</p>
+    </div>
+    <div class="valve-card mitraal">
+      <div class="valve-name">Mitraalklep</div>
+      <div class="valve-type">Atrioventriculair · Links · 2 cusps</div>
+      <p>Tussen linker atrium en linker ventrikel. Twee cusps (anterior en posterior) gefixeerd door chordae tendineae aan twee papillairspieren. De ingewikkeldste klep om chirurgisch te repareren.</p>
+    </div>
+    <div class="valve-card pulmonaal">
+      <div class="valve-name">Pulmonaalklep</div>
+      <div class="valve-type">Semilunair · Rechts · 3 cusps</div>
+      <p>Tussen rechter ventrikel en arteria pulmonalis. Werkt hetzelfde als de aortaklep maar onder veel lagere drukken (systolisch ~25 mmHg). Wordt zelden chirurgisch vervangen bij volwassenen.</p>
+    </div>
+    <div class="valve-card tricuspidaal">
+      <div class="valve-name">Tricuspidaalklep</div>
+      <div class="valve-type">Atrioventriculair · Rechts · 3 cusps</div>
+      <p>Tussen rechter atrium en rechter ventrikel. Drie cusps en drie papillairspieren. Pathologie hier is vaak secundair aan linkerhartziekten (verhoogde drukken). Correctie soms gelijktijdig met aortaklepoperatie.</p>
+    </div>
+  </div>
+
+  <!-- Hartcyclus drukdiagram -->
+  <div class="pressure-diagram">
+    <h3>De hartcyclus — wanneer openen en sluiten de kleppen?</h3>
+    <div class="cycle-phases">
+      <div class="phase phase-iso-c" style="flex:1">Isovol.<br>Contr.</div>
+      <div class="phase phase-ejection" style="flex:3">Ejectie (Systole)<br>Aortaklep OPEN</div>
+      <div class="phase phase-iso-r" style="flex:1">Isovol.<br>Relax.</div>
+      <div class="phase phase-fill" style="flex:3">Vulling (Diastole)<br>Mitraalklep OPEN</div>
+    </div>
+    <div class="valve-state-row">
+      <span class="valve-state-label">Aortaklep</span>
+      <div class="valve-states">
+        <div class="vs vs-closed vs-1">gesloten</div>
+        <div class="vs vs-open vs-3">OPEN</div>
+        <div class="vs vs-closed vs-1">gesloten</div>
+        <div class="vs vs-closed vs-3">gesloten</div>
+      </div>
+    </div>
+    <div class="valve-state-row">
+      <span class="valve-state-label">Mitraalklep</span>
+      <div class="valve-states">
+        <div class="vs vs-closed vs-1">gesloten</div>
+        <div class="vs vs-closed vs-3">gesloten</div>
+        <div class="vs vs-closed vs-1">gesloten</div>
+        <div class="vs vs-open vs-3">OPEN</div>
+      </div>
+    </div>
+    <p style="margin-top:1rem; font-size:0.82rem; color:rgba(255,255,255,0.45);">Tijdsduur: isovolumetrische contractie ≈ 50ms · ejectie ≈ 200–250ms · isovolumetrische relaxatie ≈ 70ms · vulling ≈ 400–500ms bij rust (HR 70/min)</p>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     02 · FYSIOLOGIE
+══════════════════════════════════════════════════════ -->
+<section id="fysiologie">
+<div class="container">
+  <div class="section-label">02 — Fysiologie van de aortaklep</div>
+  <h2>Drukgradiënten als aandrijving.</h2>
+
+  <div class="two-col">
+    <div>
+      <h3>Systolische drukken en klepfunctie</h3>
+      <p>De aortaklep opent wanneer de druk in het linker ventrikel die in de aorta ascendens overstijgt. Normaal is dit <strong>een vrijwel drukloze overgang</strong> — de gezonde aortaklep weerstand is verwaarloosbaar (&lt; 5 mmHg verschil). Bij stenose kan dit oplopen tot &gt; 80 mmHg.</p>
+      <p>Tijdens diastole sluit de aortaklep door terugstroming van bloed vanuit de hoge druk in de aorta. De drie gelijke cusps bollen bolvormig op en vormen samen een ster-achtige afdichting. De <strong>sinussen van Valsalva</strong> (uitstulpingen direct boven de cusps) voorkomen dat de cusps tegen de aortawand worden geblazen, én zorgen voor turbulente stroming die de coronairvaten vult tijdens diastole.</p>
+
+      <table class="pressure-table">
+        <thead>
+          <tr>
+            <th>Locatie</th>
+            <th>Systolisch (mmHg)</th>
+            <th>Diastolisch (mmHg)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Linker ventrikel</td><td class="num">100–140</td><td class="num">8–12</td></tr>
+          <tr><td>Aorta ascendens</td><td class="num">100–140</td><td class="num">70–90</td></tr>
+          <tr><td>Rechter ventrikel</td><td class="num">20–30</td><td class="num">0–8</td></tr>
+          <tr><td>A. pulmonalis</td><td class="num">20–30</td><td class="num">8–15</td></tr>
+          <tr><td>Linker atrium (PCWP)</td><td class="num">—</td><td class="num">8–15</td></tr>
+          <tr><td>Rechter atrium (CVP)</td><td class="num">—</td><td class="num">0–8</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h3>Cardiac output en stroke volume</h3>
+      <p>Het hart pompt bij rust ~5 liter bloed per minuut (<strong>cardiac output, CO</strong>). Dit is het product van hartfrequentie (HF) en slagvolume (SV):</p>
+      <div class="callout-box" style="background:var(--navy); color:white; text-align:center; font-family:var(--ff-display); font-size:1.2rem; margin:1rem 0;">
+        CO = HF × SV<br>
+        <span style="font-size:0.85rem; opacity:0.6; font-family:var(--ff-body)">5 L/min = 70 sl/min × 70 mL</span>
+      </div>
+      <p>Het <strong>slagvolume</strong> wordt bepaald door drie factoren:</p>
+      <ul style="margin:0.5rem 0 0.5rem 1.2rem; font-size:0.9rem; line-height:2; color:var(--text-muted);">
+        <li><strong>Preload</strong> — vulling ventrikel aan het einde van diastole (EDV)</li>
+        <li><strong>Afterload</strong> — weerstand die het ventrikel moet overwinnen (aortadruk + klepweerstand)</li>
+        <li><strong>Contractiliteit</strong> — intrinsieke kracht van het myocard</li>
+      </ul>
+
+      <div class="callout-box" style="background:#FEF9EC; border:1px solid var(--gold); border-radius:8px;">
+        <p style="font-size:0.88rem; margin:0;"><strong>Frank-Starling principe:</strong> hoe meer het ventrikel gevuld wordt (grotere preload), hoe groter de contractiekracht — tot een bepaald maximum. Bij hartfalen raakt de curve afgevlakt.</p>
+      </div>
+
+      <h3>Ejectiefractie (EF)</h3>
+      <p>De <strong>ejectiefractie</strong> is de verhouding slagvolume / einddiastolisch volume. Normaal: 55–70%. Bij ernstige aortastenose kan de EF aanvankelijk gehandhaafd blijven (concentrische hypertrofie), maar daalt uiteindelijk naarmate de compensatie faalt.</p>
+      <div class="callout-box" style="background:#F8F0F0; border-left:3px solid var(--blood-mid); padding:0.8rem 1rem; margin-top:0.5rem; font-size:0.86rem; color:var(--text-muted);">
+        <strong style="color:var(--blood-mid)">Klinisch belang:</strong> EF &lt; 50% bij aortastenose → sterk verhoogd operatierisico, maar tegelijkertijd een dwingende reden om te opereren.
+      </div>
+    </div>
+  </div>
+
+  <h3>Coronaire perfusie — een bijzondere afhankelijkheid</h3>
+  <p>In tegenstelling tot de meeste organen ontvangt het myocard zijn bloedtoevoer voornamelijk <strong>tijdens diastole</strong>. Tijdens systole comprimeert het samentrekkende myocard de intramuraal gelegen vaten, waardoor de doorbloeding tijdelijk verminderd is. De coronairen worden gevuld vanuit de sinus van Valsalva, direct achter de aortaklepcusps.</p>
+  <div class="callout-box" style="background:#F0F8FF; border-left:3px solid var(--teal); padding:0.8rem 1rem; font-size:0.86rem; color:var(--text-muted);">
+    <strong style="color:var(--teal)">Implicatie voor cardioplegie:</strong> door het hart in diastole te stoppen én de aorta te klemmen, wordt infusie via de coronaire ostia direct mogelijk. De diastolische positie geeft maximale klep-afdichting.
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     03 · PATHOLOGIE
+══════════════════════════════════════════════════════ -->
+<section id="pathologie">
+<div class="container">
+  <div class="section-label">03 — Pathologie van de aortaklep</div>
+  <h2>Stenose en insufficiëntie: twee tegenovergestelde mechanismen.</h2>
+
+  <div class="pathology-compare">
+
+    <!-- STENOSE -->
+    <div class="path-card stenose">
+      <div class="path-card-header">
+        <div class="path-title">Aortaklepstenose</div>
+        <div class="path-subtitle">De klep gaat niet goed open — obstructie van de uitstroom</div>
+      </div>
+      <div class="path-card-body">
+        <div class="path-mechanism">
+          <strong>Pathomechanisme</strong>
+          Progressieve calcificatie en fibrosering van de klepbladen. Begint als "aortaklepsclerose" (verdikking zonder gradient) → evolueert naar hemodynamisch significante obstructie over 5–15 jaar. De overgang van sclerose naar stenose wordt mede bepaald door inflammatoire processen vergelijkbaar met atherosclerose.
+        </div>
+
+        <h3 style="font-size:1rem; margin:0.8rem 0 0.5rem">Oorzaken</h3>
+        <ul style="font-size:0.86rem; line-height:1.9; margin:0 0 0.8rem 1.1rem; color:var(--text-muted)">
+          <li><strong>Degeneratief/calcificerend</strong> — meest voorkomend &gt;65j. Risicofactoren: hoge leeftijd, roken, hypercholesterolemie, nierinsufficiëntie</li>
+          <li><strong>Bicuspide aortaklep (BAV)</strong> — aangeboren fusie van twee cusps. Prevalentie 1–2% bevolking. Versnelde calcificatie; presentatie 10–20jr eerder dan tricuspide stenose</li>
+          <li><strong>Reumatische koorts</strong> — post-streptokokkaal. Vrijwel altijd gelijktijdige mitraalkleppathologie. Tegenwoordig zeldzaam in westerse wereld</li>
+        </ul>
+
+        <h3 style="font-size:1rem; margin:0.8rem 0 0.5rem">Ernst-gradatie (ACC/AHA 2021)</h3>
+        <div class="aortic-gradient-viz">
+          <div class="gradient-row">
+            <span class="label-mono">Mild</span>
+            <div class="gradient-bar-wrap">
+              <div class="gradient-bar" style="width:25%; background:#52B788;"></div>
+            </div>
+            <span class="val-mono" style="color:#52B788">AVA &gt;1,5 cm² · ΔPmean &lt;20</span>
+          </div>
+          <div class="gradient-row">
+            <span class="label-mono">Matig</span>
+            <div class="gradient-bar-wrap">
+              <div class="gradient-bar" style="width:55%; background:#F0C040;"></div>
+            </div>
+            <span class="val-mono" style="color:#F0C040">AVA 1,0–1,5 cm² · ΔPmean 20–40</span>
+          </div>
+          <div class="gradient-row">
+            <span class="label-mono">Ernstig</span>
+            <div class="gradient-bar-wrap">
+              <div class="gradient-bar" style="width:85%; background:#E74C3C;"></div>
+            </div>
+            <span class="val-mono" style="color:#E74C3C">AVA &lt;1,0 cm² · ΔPmean &gt;40</span>
+          </div>
+          <div class="gradient-row">
+            <span class="label-mono">Zeer ernstig</span>
+            <div class="gradient-bar-wrap">
+              <div class="gradient-bar" style="width:100%; background:#9B1C1C;"></div>
+            </div>
+            <span class="val-mono" style="color:#F2A0A0">AVA &lt;0,6 cm² · ΔPmean &gt;60</span>
+          </div>
+          <p style="font-size:0.75rem; margin-top:0.8rem; color:rgba(255,255,255,0.35)">AVA = aortaklepoppervlak · ΔPmean = gemiddelde drukgradiënt in mmHg</p>
+        </div>
+
+        <h3 style="font-size:1rem; margin:0.8rem 0 0.5rem">Compensatiemechanismen → decompensatie</h3>
+        <p style="font-size:0.86rem; color:var(--text-muted)">Het linker ventrikel compenseert chronische drukbelasting door <strong>concentrische hypertrofie</strong>: de wand verdikt, het cavum verkleint niet. Dit handhaaft de ejectiefractie maar verhoogt de ventrikelstijfheid en diastolische druk. Diastolische dysfunctie treedt vroeg op. Uiteindelijk → ventrikeldilatatie → systolische dysfunctie → eindstadium hartfalen.</p>
+      </div>
+    </div>
+
+    <!-- INSUFFICIËNTIE -->
+    <div class="path-card insuff">
+      <div class="path-card-header">
+        <div class="path-title">Aortaklepinsufficiëntie</div>
+        <div class="path-subtitle">De klep sluit niet goed — regurgitatie naar het ventrikel</div>
+      </div>
+      <div class="path-card-body">
+        <div class="path-mechanism">
+          <strong>Pathomechanisme</strong>
+          Tijdens diastole stroomt een fractie van het ejected slagvolume terug door de lek. Het linker ventrikel krijgt zo meer bloed te verwerken dan normaal (verhoogde preload). Het <strong>regurgitatievolume</strong> kan oplopen tot 50–70% van het forward slagvolume. Adaptatie via dilatatie én hypertrofie (excentrisch).
+        </div>
+
+        <h3 style="font-size:1rem; margin:0.8rem 0 0.5rem">Oorzaken</h3>
+        <ul style="font-size:0.86rem; line-height:1.9; margin:0 0 0.8rem 1.1rem; color:var(--text-muted)">
+          <li><strong>Aortaworteldilatatie</strong> — Marfan syndroom, aortaectasie, hypertensief; klepbladen normaal maar anulus te groot voor afdichting</li>
+          <li><strong>Bicuspide aortaklep</strong> — ook oorzaak van insufficiëntie (naast stenose)</li>
+          <li><strong>Infectieuze endocarditis</strong> — destructie van één of meer cusps; kan acuut en levensbedreigend zijn</li>
+          <li><strong>Aortadissectie type A</strong> — prolaps van de klep; chirurgische noodsituatie</li>
+          <li><strong>Reumatisch</strong> — fusie met retractie van cusps</li>
+        </ul>
+
+        <h3 style="font-size:1rem; margin:0.8rem 0 0.5rem">Hemodynamische gevolgen</h3>
+        <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:0.5rem">Kenmerkend: <strong>grote polsdruk</strong> (hoge systolische én lage diastolische druk). De diastolische druk daalt doordat bloed terugstroomt. Dit leidt tot:</p>
+        <ul style="font-size:0.86rem; line-height:1.9; margin:0 0 0.8rem 1.1rem; color:var(--text-muted)">
+          <li>Verminderde coronaire perfusiedruk (gevaar voor myocardischemie)</li>
+          <li>Volume-overbelasting linker ventrikel → excentrische hypertrofie → dilatatie</li>
+          <li>EF blijft lang gehandhaafd, maar is relatief; zelfs "normale" EF kan verlaagd zijn vergeleken met de hemodynamische belasting</li>
+        </ul>
+
+        <div class="callout-box" style="background:#F0F8FF; border-left:3px solid var(--teal); padding:0.8rem 1rem; font-size:0.85rem; color:var(--text-muted);">
+          <strong style="color:var(--teal)">Acuut vs. chronisch:</strong> bij acute insufficiëntie (endocarditis, dissectie) heeft het linker ventrikel geen tijd om te compenseren → acuut longoedeem en cardiogene shock. Dit is een chirurgische noodsituatie. Chronische insufficiëntie kent een lange asymptomatische fase van jaren tot decennia.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Symptomentriade -->
+  <h3>De klassieke symptomentriade van aortastenose</h3>
+  <p>Zodra symptomen optreden bij ernstige aortastenose verandert de prognose dramatisch zonder interventie:</p>
+  <div class="symptom-triad">
+    <div class="symptom-item">
+      <div class="symptom-icon">💨</div>
+      <div class="symptom-name">Dyspnoe</div>
+      <div class="symptom-desc">Kortademigheid bij inspanning door verhoogde vullingsdrukken en pulmonale hypertensie</div>
+      <div class="survival-bar" style="margin-top:0.8rem; background:#F8D7DA; padding:0.4rem; border-radius:4px; color:var(--blood); font-weight:700">Gem. overleving: ~2 jaar</div>
+    </div>
+    <div class="symptom-item">
+      <div class="symptom-icon">😵</div>
+      <div class="symptom-name">Syncope</div>
+      <div class="symptom-desc">Flauwvallen bij inspanning door onvoldoende cardiac output bij verhoogde vraag</div>
+      <div class="survival-bar" style="margin-top:0.8rem; background:#FFF3CD; padding:0.4rem; border-radius:4px; color:#856404; font-weight:700">Gem. overleving: ~3 jaar</div>
+    </div>
+    <div class="symptom-item">
+      <div class="symptom-icon">💛</div>
+      <div class="symptom-name">Angina pectoris</div>
+      <div class="symptom-desc">Borstkrampen door mismatch O₂-vraag en -aanbod, zelfs zonder coronairlijden</div>
+      <div class="survival-bar" style="margin-top:0.8rem; background:#D4EDDA; padding:0.4rem; border-radius:4px; color:#155724; font-weight:700">Gem. overleving: ~5 jaar</div>
+    </div>
+  </div>
+  <p style="font-size:0.85rem; color:var(--text-muted); font-style:italic; text-align:center">Klassieke data: Ross & Braunwald 1968. Moderne inzichten bevestigen het beeld, al verbetert vroegere detectie de prognose.</p>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     04 · INDICATIES
+══════════════════════════════════════════════════════ -->
+<section id="indicaties">
+<div class="container">
+  <div class="section-label">04 — Operatie-indicaties (ESC Guidelines 2021)</div>
+  <h2>Wanneer opereren we?</h2>
+
+  <p>De beslissing om te opereren is een weging van hemodynamische ernst, symptomatologie, ventrikelfunction, complicatierisico en patiëntvoorkeur. Internationaal wordt gewerkt met de richtlijnen van de European Society of Cardiology (ESC) en de ACC/AHA.</p>
+
+  <div class="indication-grid">
+    <div class="indication-card ind-ia">
+      <div class="ind-class">Klasse I (Indicatie)</div>
+      <div class="ind-title">Symptomatische ernstige AS</div>
+      <p>AVA &lt;1,0 cm² én klachten (angina, syncope, dyspnoe). Onbehandeld: mortaliteit &gt;50% op 2 jaar. Aortaklepvervanging of TAVI geïndiceerd.</p>
+    </div>
+    <div class="indication-card ind-ia">
+      <div class="ind-class">Klasse I (Indicatie)</div>
+      <div class="ind-title">Ernstige AS + andere cardiochirurgie</div>
+      <p>Als er toch een CABG, aneurysmaresectie of andere klep geopereerd wordt, wordt de aortaklep gelijktijdig vervangen.</p>
+    </div>
+    <div class="indication-card ind-ia">
+      <div class="ind-class">Klasse I (Indicatie)</div>
+      <div class="ind-title">EF &lt;50% bij ernstige AS</div>
+      <p>Zelfs asymptomatisch geeft een gedaalde ejectiefractie een dwingende reden voor interventie — systolische dysfunctie is een alarmsignaal.</p>
+    </div>
+    <div class="indication-card ind-iib">
+      <div class="ind-class">Klasse IIa (Overweeg)</div>
+      <div class="ind-title">Asymptomatische ernstige AS, hoge gradient</div>
+      <p>ΔVmax &gt;5,5 m/s óf snelle progressie óf abnormale inspanningstest: vroegtijdige interventie te overwegen.</p>
+    </div>
+    <div class="indication-card ind-iib">
+      <div class="ind-class">Klasse IIa (Overweeg)</div>
+      <div class="ind-title">Ernstige AI + dilatatie LV</div>
+      <p>Aortakleppinsufficiëntie met LVESD &gt;50mm of LVEDD &gt;65mm, ook asymptomatisch: chirurgie te overwegen voor irreversibele ventrikelschade optreedt.</p>
+    </div>
+    <div class="indication-card ind-iii">
+      <div class="ind-class">Aanvullende overweging</div>
+      <div class="ind-title">Heart Team beslissing</div>
+      <p>Bij iedere patiënt: multidisciplinair overleg (cardioloog, cardiochirurg, anesthesist, geriatrist) weegt risico-scores, anatomie, comorbiditeit en patiëntvoorkeur.</p>
+    </div>
+  </div>
+
+  <div class="callout-box" style="background:var(--navy); color:white; padding:1.5rem; border-radius:10px; margin-top:1rem;">
+    <h3 style="color:var(--gold-lt); margin-bottom:0.8rem; font-size:1rem;">Risicostratificatie: EuroSCORE II en STS-score</h3>
+    <p style="font-size:0.88rem; color:rgba(255,255,255,0.7)">Voorspelt de kans op 30-dagenmortaliteit op basis van leeftijd, geslacht, nierfunctie, NYHA-klasse, EF, urgentie, pulmonale drukken en comorbiditeiten. EuroSCORE II &lt;4% = laag risico · 4–10% = intermediair · &gt;10% = hoog. Dit is mede bepalend voor de keuze chirurgie vs. TAVI.</p>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     05 · KLEPKEUZE
+══════════════════════════════════════════════════════ -->
+<section id="klepkeuze">
+<div class="container">
+  <div class="section-label">05 — Keuze van de klepprothese</div>
+  <h2>Mechanisch of biologisch?</h2>
+
+  <p>De keuze van de klepprothese is een van de meest bepalende beslissingen in de cardiochirurgie, met levenslange consequenties. De trade-off is helder: <strong>duurzaamheid</strong> versus <strong>anticoagulatie</strong>.</p>
+
+  <div class="prosthesis-compare">
+    <div class="pros-col">
+      <div class="pros-header mech">
+        <div class="pros-name">⚙️ Mechanische klep</div>
+        <div class="pros-sub">Metalen bileaflet-ontwerp (bijv. St. Jude Medical, On-X)</div>
+      </div>
+      <div class="pros-body">
+        <div class="pros-row"><span class="pros-row-label">Levensduur</span><span class="pros-row-val"><strong>Levenslang</strong> (&gt;30 jaar aangetoond)</span></div>
+        <div class="pros-row"><span class="pros-row-label">Anticoagulatie</span><span class="pros-row-val"><strong>Levenslang VKA</strong> (fenprocoumon/acenocoumarol) streef-INR 2,0–3,0 (of 1,5–2,0 bij On-X)</span></div>
+        <div class="pros-row"><span class="pros-row-label">Bloedingsrisico</span><span class="pros-row-val">1–2% per jaar (major bleedings)</span></div>
+        <div class="pros-row"><span class="pros-row-label">Trombo-embolie</span><span class="pros-row-val">0,5–1% per jaar (bij adequate antistolling)</span></div>
+        <div class="pros-row"><span class="pros-row-label">Geluid</span><span class="pros-row-val">Klikgeluid hoorbaar — sommige patiënten ervaren dit als storend</span></div>
+        <div class="pros-row"><span class="pros-row-label">Re-operatie</span><span class="pros-row-val">Vrijwel nooit om structurele reden</span></div>
+        <div class="pros-row"><span class="pros-row-label">MRI</span><span class="pros-row-val">MRI-conditioneel (de meeste moderne mechanische kleppen)</span></div>
+        <div class="pros-row"><span class="pros-row-label">Ideale patiënt</span><span class="pros-row-val">Jong (&lt;60–65j), actief, reeds op antistolling, goede therapietrouw</span></div>
+      </div>
+    </div>
+
+    <div class="pros-vs">vs</div>
+
+    <div class="pros-col">
+      <div class="pros-header bio">
+        <div class="pros-name">🌿 Biologische klep</div>
+        <div class="pros-sub">Gepericardiseerd rundvleesweefsel of varkenslongader</div>
+      </div>
+      <div class="pros-body">
+        <div class="pros-row"><span class="pros-row-label">Levensduur</span><span class="pros-row-val"><strong>10–20 jaar</strong> (afhankelijk van leeftijd bij implantatie)</span></div>
+        <div class="pros-row"><span class="pros-row-label">Anticoagulatie</span><span class="pros-row-val"><strong>Geen</strong> (alleen 3–6 maanden VKA of aspirine post-OK, tenzij andere indicatie)</span></div>
+        <div class="pros-row"><span class="pros-row-label">Bloedingsrisico</span><span class="pros-row-val">Geen structureel verhoogd risico na stopzetten anticoagulatie</span></div>
+        <div class="pros-row"><span class="pros-row-label">Trombo-embolie</span><span class="pros-row-val">Laag na de vroege fase (~0,3% per jaar)</span></div>
+        <div class="pros-row"><span class="pros-row-label">Geluid</span><span class="pros-row-val">Geen hoorbaar klikgeluid</span></div>
+        <div class="pros-row"><span class="pros-row-label">Re-operatie</span><span class="pros-row-val">Na 12–15 jaar structurele klepverslechtering (SVD) → re-operatie of valve-in-valve TAVI</span></div>
+        <div class="pros-row"><span class="pros-row-label">Calcificatie</span><span class="pros-row-val">Versneld bij jonge patiënten, nierinsufficiëntie, hypercalciëmie</span></div>
+        <div class="pros-row"><span class="pros-row-label">Ideale patiënt</span><span class="pros-row-val">&gt;65–70j, of antistolling gecontra-indiceerd, vrouwelijke kinderwens</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="decision-tree">
+    <h3>Leeftijdsgebonden vuistregel (ESC/EACTS 2021)</h3>
+    <div class="dt-row">
+      <span class="dt-age">&lt;60j</span>
+      <span class="dt-choice"><strong style="color:#8AB4F8">Mechanisch</strong> — lange verwachte levensduur maakt re-operatie onaantrekkelijk</span>
+      <span class="dt-reason">Tenzij contra-indicatie antistolling of sterke voorkeur patiënt</span>
+    </div>
+    <div class="dt-row">
+      <span class="dt-age">60–65j</span>
+      <span class="dt-choice"><strong style="color:var(--gold-lt)">Gedeeld besluit</strong> — uitgebreide counseling over voor- en nadelen beide opties</span>
+      <span class="dt-reason">Patiëntvoorkeur weegt zwaar in deze grijze zone</span>
+    </div>
+    <div class="dt-row">
+      <span class="dt-age">&gt;65j</span>
+      <span class="dt-choice"><strong style="color:var(--sage-lt)">Biologisch</strong> — kleplevensduur voldoende; anticoagulantierisico's wegen zwaarder</span>
+      <span class="dt-reason">Valve-in-valve TAVI als redding bij degeneratie</span>
+    </div>
+    <div class="dt-row">
+      <span class="dt-age">Speciale gevallen</span>
+      <span class="dt-choice"><strong style="color:var(--lav-lt)">Homograft / Ross-procedure</strong> — bij jonge patiënten, endocarditis aortawortel</span>
+      <span class="dt-reason">Ross: eigen pulmonaalklep naar aortapositie — complex maar vrijwel ideaal voor jongeren</span>
+    </div>
+  </div>
+
+  <h3>Typen klepprothesen — een overzicht</h3>
+  <div class="types-grid">
+    <div class="type-card">
+      <div class="type-name">Bileaflet mechanisch</div>
+      <div class="type-example">St. Jude Medical · On-X · Carbomedics</div>
+      <p>Twee koolstof-schijfjes. Goudstandaard mechanisch. Minimale turbulentie, uitstekende hemodynamiek. Kliksound audibel.</p>
+    </div>
+    <div class="type-card">
+      <div class="type-name">Gepericardiseerd bioprothese</div>
+      <div class="type-example">Perimount · Inspiris Resilia · Trifecta</div>
+      <p>Runderhart-pericardweefsel over een stent. Meest gebruikt biologisch type. Goede hemodynamiek, steeds betere anti-calcificatiebehandeling.</p>
+    </div>
+    <div class="type-card">
+      <div class="type-name">Varkenslongader (porcine)</div>
+      <div class="type-example">Mosaic · Epic · Hancock II</div>
+      <p>Originele kleparchitectuur van het varken behouden. Historisch meest gebruikt, inmiddels veelal vervangen door pericard-kleppen.</p>
+    </div>
+    <div class="type-card">
+      <div class="type-name">Homograft / Allograft</div>
+      <div class="type-example">Cryopreserved donor aortaklep</div>
+      <p>Menselijke donorklep. Uitstekend voor infectieuze endocarditis, aortawortelabcessen. Beperkte beschikbaarheid, technisch veeleisend.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     06 · HART-LONGMACHINE
+══════════════════════════════════════════════════════ -->
+<section id="hlm">
+<div class="container">
+  <div class="section-label">06 — Extracorporele circulatie: de hart-longmachine</div>
+  <h2>Het hart stilzetten zonder de patiënt te verliezen.</h2>
+
+  <div class="pull-quote">De HLM vervangt tijdelijk de pompeigenschappen van het hart én de gaswisselingsfunctie van de longen — twee organen in één apparaat, buiten het lichaam.</div>
+
+  <p>De hart-longmachine (HLM), ook wel <strong>cardiopulmonaire bypass (CPB)</strong> of <strong>extracorporele circulatie (ECC)</strong> genoemd, maakt het mogelijk het hart stil te leggen en bloedloos aan de kleppen te werken. Zonder HLM is open hartchirurgie onmogelijk.</p>
+
+  <!-- HLM circuit diagram -->
+  <div class="hlm-circuit">
+    <div class="hlm-side">
+      <div class="hlm-component venous">
+        <div class="comp-name">💙 Veneuze drainage</div>
+        <div class="comp-func">Canule in vena cava (superior + inferior) of rechter atrium. Bloed loopt passief via de zwaartekracht of mild vacuüm naar het reservoir.</div>
+      </div>
+      <div class="hlm-component field">
+        <div class="comp-name">🩸 Cardiotomie-reservoir</div>
+        <div class="comp-func">Opvangreservoir voor bloed uit het operatieveld (via "cell saver"). Wordt teruggevoerd in het circuit of apart verwerkt.</div>
+      </div>
+      <div class="hlm-component heat">
+        <div class="comp-name">🌡️ Warmtewisselaar</div>
+        <div class="comp-func">Regelt bloedtemperatuur. Tijdens CPB afgekoeld tot 28–34°C (moderate hypothermie) voor extra myocardprotectie. Herwarming vóór weaning.</div>
+      </div>
+    </div>
+
+    <div class="hlm-center">
+      <svg viewBox="0 0 120 200" width="90" height="150" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,0.4)"/>
+          </marker>
+        </defs>
+        <rect width="120" height="200" fill="transparent"/>
+        <!-- Stroom down links -->
+        <path d="M 60 10 L 60 90" stroke="#4A90D9" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+        <text x="60" y="50" fill="#4A90D9" font-size="8" text-anchor="middle" font-family="monospace">veneus</text>
+        <!-- Machine box -->
+        <rect x="25" y="85" width="70" height="40" rx="5" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <text x="60" y="107" fill="rgba(255,255,255,0.5)" font-size="8" text-anchor="middle" font-family="monospace">H L M</text>
+        <!-- Stroom up rechts -->
+        <path d="M 60 125 L 60 190" stroke="#C0392B" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+        <text x="60" y="160" fill="#C0392B" font-size="8" text-anchor="middle" font-family="monospace">arterieel</text>
+      </svg>
+    </div>
+
+    <div class="hlm-side">
+      <div class="hlm-component oxyg">
+        <div class="comp-name">🫁 Membraanoxygenator</div>
+        <div class="comp-func">Vervangt de longfunctie. O₂ diffundeert door holle vezels naar het bloed; CO₂ gaat de andere kant op. Tegenwoordig altijd membraantype (vs. historisch bubble-oxygenator). Flow: 4–5 L/min.</div>
+      </div>
+      <div class="hlm-component pump">
+        <div class="comp-name">⚙️ Rollerpompen / centrifugaalpompen</div>
+        <div class="comp-func">Drijft de bloedstroom aan. Moderne systemen gebruiken centrifugaalpompen (minder hemolyse). Debiet instelbaar op basis van BSA, temp en saturatie.</div>
+      </div>
+      <div class="hlm-component arterial">
+        <div class="comp-name">❤️ Arteriële canulering</div>
+        <div class="comp-func">Retour-canule in aorta ascendens (distaal van klem) of a. femoralis. Zuurstofrijk bloed wordt teruggepompt in systemische circulatie.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Operationele parameters tijdens CPB</h3>
+  <div class="hlm-params">
+    <div class="hlm-param">
+      <div class="param-val">2,2–2,4</div>
+      <div class="param-unit">L/MIN/M²</div>
+      <div class="param-name">Cardiac index streefwaarde</div>
+    </div>
+    <div class="hlm-param">
+      <div class="param-val">28–34°C</div>
+      <div class="param-unit">BLOEDTEMPERATUUR</div>
+      <div class="param-name">Gematigde hypothermie</div>
+    </div>
+    <div class="hlm-param">
+      <div class="param-val">50–80</div>
+      <div class="param-unit">MMHG</div>
+      <div class="param-name">Gemiddelde arteriële druk (MAP)</div>
+    </div>
+    <div class="hlm-param">
+      <div class="param-val">&gt;400</div>
+      <div class="param-unit">SECONDEN</div>
+      <div class="param-name">ACT (stollingstijd) onder heparine</div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Heparine en protamine</h3>
+      <p>Vóór aansluiting HLM: <strong>heparine 300–400 IU/kg</strong> IV om stolling te voorkomen in het circuit. Na weaning van CPB: <strong>protamine</strong> (heparine-antagonist) om de antistolling volledig te neutraliseren. ACT-meting controleert de effectiviteit.</p>
+    </div>
+    <div>
+      <h3>Complicaties van CPB</h3>
+      <p>CPB is geen fysiologische toestand: contactactivering van het complementsysteem, hemodilutie, hemolyse, microembolieën en hypothermie leiden tot een systemische inflammatoire respons (<strong>SIRS</strong>). Dit is mede verantwoordelijk voor postoperatief orgaandysfunctie.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     07 · CARDIOPLEGIE
+══════════════════════════════════════════════════════ -->
+<section id="cardioplegie">
+<div class="container">
+  <div class="section-label">07 — Myocardprotectie: cardioplegie</div>
+  <h2>Het hart stilleggen, veilig en reproduceerbaar.</h2>
+
+  <p>Cardioplegie is de gecontroleerde hartstilstand die nodig is voor chirurgie aan een bloedloos en bewegingsloos hart. Het woord komt van het Grieks: <em>kardia</em> (hart) + <em>plēgē</em> (slag/verlamming). Doel: het hart stilzetten en de myocardcellen beschermen tegen ischemische schade gedurende de <strong>aortaklemtijd</strong>.</p>
+
+  <div class="cardio-mech">
+    <div class="mech-card">
+      <div class="mech-header kalium">⚡ Kalium: de elektrische rem</div>
+      <div class="mech-body">
+        <p>Myocardcellen hebben in rust een membraanpotentiaal van ca. <strong>−90 mV</strong>, onderhouden door actief kaliumtransport. Een hoge extracellulaire kaliumconcentratie (<strong>16–30 mmol/L</strong>) in de cardioplegieplossing vermindert dit gradient drastisch, waardoor de cel depolariseert en in een <strong>diastolische arresttoestand</strong> blijft.</p>
+        <p>In rust is de zuurstofbehoefte van het myocard ~8–10 mL O₂/100g/min. Na kaliumarrest daalt dit naar <strong>&lt;2 mL O₂/100g/min</strong> — een reductie van &gt;80%.</p>
+        <p>Het hart stopt in <strong>flaccide diastole</strong> (slap), wat optimaal is voor de chirurg: kleppen zijn goed zichtbaar en toegankelijk.</p>
+      </div>
+    </div>
+    <div class="mech-card">
+      <div class="mech-header koude">❄️ Hypothermie: de metabole rem</div>
+      <div class="mech-body">
+        <p>Koude verlaagt het metabolisme dramatisch. De <strong>Van 't Hoff-regel</strong>: elke 10°C daling halveert de metabole snelheid (Q₁₀-effect). Bij een myocardtemperatuur van 15°C is de O₂-behoefte nog slechts ~5% van normaal.</p>
+        <p>Koude cardioplegie (4–8°C) wordt aangevuld met lokale topische koeling: ijswater of ijs om het pericardium. Doel myocardtemperatuur: <strong>&lt;15°C</strong>.</p>
+        <p>Koude preserveert ook enzymatische functie en remt eiwitdenaturatie — essentieel bij langere klemtijden (&gt;90 minuten).</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Samenstelling cardioplegieplossingen</h3>
+  <div class="cardio-types">
+    <div class="cardio-type">
+      <div class="ct-name">Crystalloid cardioplegie</div>
+      <div class="ct-sub">St. Thomas · Bretschneider (HTK)</div>
+      <p>Eenvoudige hoog-kalium-kristalloïdoplossing. HTK (Custodiol®): één enkeldosis geeft bescherming voor 2–4 uur. Wijd gebruikt, goede veiligheidsrecord bij lange klemtijden.</p>
+    </div>
+    <div class="cardio-type">
+      <div class="ct-name">Bloedcardioplegie</div>
+      <div class="ct-sub">Cold · Warm · Tepid blood CP</div>
+      <p>Mengsel van crystalloïd en patiëntbloed (4:1 of 8:1). Superieure O₂-levering, betere buffercapaciteit. Warm bloedcardioplegie (&gt;37°C): continu reperfusie, minimale ischaemie-periode. Meest gebruikt in gespecialiseerde centra.</p>
+    </div>
+    <div class="cardio-type">
+      <div class="ct-name">Del Nido cardioplegie</div>
+      <div class="ct-sub">Pediatrische chirurgie · Singleshot</div>
+      <p>Één dosis (1:4 bloed:crystalloïd) geeft 60–90 min bescherming. Bevat lidocaïne (natriumkanaalblokker als aanvulling op kalium). Oorspronkelijk pediatrisch, nu ook bij volwassenen populair.</p>
+    </div>
+  </div>
+
+  <h3>Toedieningsroute</h3>
+  <div class="del-strategy">
+    <div class="del-card anterograde">
+      <div class="del-name">Antegrade toediening</div>
+      <p>Cardioplegieplossing wordt via een naald <strong>direct in de aortawortel</strong> gespoten (of selectief in de coronaire ostia). Bloed stroomt via de coronairen het myocard in.</p>
+      <p style="margin-top:0.5rem; font-size:0.83rem; color:var(--text-lt)">Voordeel: eenvoudig. Nadeel: bij ernstige coronairlijden (obstructies) kan distributie ongelijkmatig zijn.</p>
+    </div>
+    <div class="del-card retrograde">
+      <div class="del-name">Retrograde toediening</div>
+      <p>Via een canule in de <strong>coronaire sinus</strong> (veneuze zijde). Vloeistof stroomt retrograad door het veneuze coronaire bed naar het myocard.</p>
+      <p style="margin-top:0.5rem; font-size:0.83rem; color:var(--text-lt)">Voordeel: onafhankelijk van coronaire anatomie. Nadeel: slecht beschermt het rechter ventrikel. Wordt vaak gecombineerd met antegrade.</p>
+    </div>
+  </div>
+
+  <div class="callout-box" style="background:var(--navy); color:white; padding:1.5rem; border-radius:10px; margin:1.5rem 0;">
+    <p style="font-size:0.9rem; color:rgba(255,255,255,0.8);"><strong style="color:var(--gold-lt)">Klemtijd vs. bypasstijd:</strong> De aortaklemtijd (cross-clamp time) is de periode dat de aorta afgeklemd is en het myocard ischaemisch is — dit is de kritische periode voor cardioplegie. De totale CPB-tijd omvat ook de periodes voor en na het klemmen. Doelstelling bij aortaklepvervanging: klemtijd &lt;90–120 minuten. Elke 30 minuten wordt aanvullende cardioplegie gegeven (bij kristalloïd) of continu toegediend (bij warme bloed-CP).</p>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     08 · DE OPERATIE STAP VOOR STAP
+══════════════════════════════════════════════════════ -->
+<section id="operatie">
+<div class="container">
+  <div class="section-label">08 — Chirurgische procedure: de aortaklepvervanging</div>
+  <h2>Van huidincisie tot sternum sluiten.</h2>
+
+  <p>Een conventionele aortaklepvervanging (AVR) via sternotomie neemt gemiddeld <strong>3–4 uur</strong> in beslag. De procedure vereist nauwe samenwerking tussen chirurg, assistent, perfusionist (HLM-operator), anesthesist en omloop.</p>
+
+  <div class="op-timeline">
+    <div class="timeline-bar"></div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--navy)">1</div>
+      <div class="op-step-body">
+        <div class="step-name">Anesthesie en monitoring</div>
+        <div class="step-time">PRE-OPERATIEF · 60–90 min voor snijden</div>
+        <p>Algehele anesthesie (TIVA of inhalatie). Invasieve monitoring: arteriële lijn (continue bloeddruk), centraal veneuze katheter (CVP), TEE (transoesofageale echocardiografie) voor real-time klepbeoordeling. Blaaskatheter. Temperatuursensor.</p>
+        <div class="step-detail"><strong>TEE-rol:</strong> pre-operatief bevestigt klepanatomie en ernst; intraoperatief bewaakt HLM-functie en post-implantatiecontrole (lekkage, gradient, ventrikelfunction).</div>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--blood)">2</div>
+      <div class="op-step-body">
+        <div class="step-name">Sternotomie en pericardiotomie</div>
+        <div class="step-time">OPENING · 0–20 min</div>
+        <p>Mediane longitudinale sternotomie: het borstbeen wordt met een oscillerende zaag over de volledige lengte gedeeld. Bloedstelpende was in het sternummerg. Een retractor houdt het borstbeen gefixeerd open.</p>
+        <p>Het pericardium wordt geopend en aan de wanden opgehangen (stays), zodat het hart zichtbaar en bereikbaar is. Inspectie van het hart op onverwachte pathologie.</p>
+        <div class="step-detail"><strong>Minimaal invasief alternatief:</strong> gedeeltelijke sternotomie (ministernotomie) of rechtszijdige minithoracotomie — minder trauma, sneller herstel, zelfde resultaat in ervaren handen.</div>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--teal)">3</div>
+      <div class="op-step-body">
+        <div class="step-name">Canulering en start CPB</div>
+        <div class="step-time">HLM-VOORBEREIDING · 20–40 min</div>
+        <p><strong>Heparine 300–400 IU/kg</strong> IV → ACT controle (&gt;400 seconden vereist). Arteriële canule in aorta ascendens (distaal van de geplande klemplaats). Veneuze canules in vena cava superior en inferior, of 2-stage-canule in rechter atrium.</p>
+        <p>Start extracorporele circulatie: de HLM neemt de pompfunctie over. Geleidelijke koeling naar 28–32°C. Controle van veneuze drainage en arteriële terugstroom. Longen worden van beademing gehaald (atelektase tijdens CPB is acceptabel).</p>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:#6B3FA0">4</div>
+      <div class="op-step-body">
+        <div class="step-name">Aortaklemming en cardioplegie</div>
+        <div class="step-time">KLEMPLAATSING · ±40 min</div>
+        <p>Een <strong>aortaklem (cross-clamp)</strong> wordt aangebracht op de aorta ascendens, proximaal van de arteriële HLM-canule en distaal van de coronaire ostia. Hiermee wordt het hart geïsoleerd van de systemische circulatie.</p>
+        <p>Direct na klemplaatsing: <strong>koude cardioplegieplossing</strong> wordt geïnjecteerd via een cardioplegienaald in de aortawortel (antegrade). Het hart stopt typisch binnen <strong>30–60 seconden</strong>. Aanvullend topisch koude (ijswater). Myocardtemperatuur doel: &lt;15°C.</p>
+        <div class="step-detail"><strong>Klemtijdregistratie</strong> start hier. De perfusionist noteert elk moment en geeft elke 20–30 minuten aanvullende cardioplegie (afhankelijk van het gebruikte protocol).</div>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--blood-mid)">5</div>
+      <div class="op-step-body">
+        <div class="step-name">Aortotomie en klepexpositie</div>
+        <div class="step-time">PREPARATIE · ±55 min</div>
+        <p>De aorta ascendens wordt transversaal geopend: <strong>aortotomie</strong>, ongeveer 1 cm boven de klep. Nauwkeurig localiseren van de coronaire ostia (links en rechts) om beschadiging te voorkomen. De incisie geeft directe toegang tot de aortaklep.</p>
+        <p>De drie cusps zijn nu volledig zichtbaar. De chirurg beoordeelt definitief de ernst van pathologie (calcificatiegraad, commissuurverlies, cusp-mobiliteit). Soms wordt via de open aorta aanvullend retrograde cardioplegie via de coronaire ostia gegeven.</p>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--blood)">6</div>
+      <div class="op-step-body">
+        <div class="step-name">Klepexcisie en debridement anulus</div>
+        <div class="step-time">EXCISIE · ±65 min</div>
+        <p>De drie klepbladen worden met een schaartje bij de anulus afgesneden (<strong>excisie</strong>). Ernstig gecalcificeerde cusps worden in fragmenten verwijderd. Vervolgens: zorgvuldig <strong>debridement</strong> van alle kalkresten van de fibreuze anulus.</p>
+        <p>Dit is een cruciale stap: incompleet debridement → paravalvulaire lekkage postoperatief. Overmatig debridement → aortawortelletsel of AV-blok (het HIS-bundeltje loopt vlak langs de anulus bij de non-coronary cusp).</p>
+        <div class="step-detail"><strong>Maat opnemen:</strong> na debridement wordt met een sizingsizer de juiste prothesemaat bepaald. Typisch voor volwassenen: maat 21–27 mm.</div>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--gold)">7</div>
+      <div class="op-step-body">
+        <div class="step-name">Implanteren van de klepprothese</div>
+        <div class="step-time">IMPLANTATIE · ±75 min — het hart van de operatie</div>
+        <p>Gehechte of genaaide bevestiging van de prothese aan de anulus. Twee technieken:</p>
+        <p><strong>Interrupted mattress sutures (meest gebruikt):</strong> 12–15 matrashechtingen (2-0 Ethibond of Tevdek) worden circulair in de anulus geplaatst, daarna door de cuff van de prothese geregen. De prothese wordt langs de hechtdraden omlaag geschoven ("parachute technique") en geknopt.</p>
+        <p><strong>Continuous suture:</strong> één doorlopende hechting — sneller, maar minder toegankelijk bij heroperaties.</p>
+        <div class="step-detail"><strong>Oriëntatie:</strong> bij biologische kleppen wordt de prothese georiënteerd zodat de stents niet voor de coronaire ostia staan. Bij mechanische kleppen: optimale orientatie van de twee schijfjes voor maximale opening en minimale turbulentie.</div>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--sage)">8</div>
+      <div class="op-step-body">
+        <div class="step-name">Aortasluiting en luchtverwijdering (de-airing)</div>
+        <div class="step-time">SLUITEN · ±90 min</div>
+        <p>De aortotomie wordt gesloten met een doorlopende hechting (4-0 Prolene, dubbellaags). Vóór de laatste steken: <strong>de-airing</strong> — het hart en de aorta worden ontlucht door de operatietafel in Trendelenburg-positie te brengen en actief lucht te aspireren via de cardioplegienaald. Lucht in de coronairen of cerebrale vaten veroorzaakt embolieën.</p>
+        <div class="step-detail">TEE is hierbij van grote waarde: de echo-operateur ziet direct of er nog lucht in het linker ventrikel aanwezig is.</div>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--teal)">9</div>
+      <div class="op-step-body">
+        <div class="step-name">Aortaklem los — het hart herstart</div>
+        <div class="step-time">REPERFUSIE · ±95 min — het meest nerveuze moment</div>
+        <p>De aortaklem wordt verwijderd. Warm, zuurstofrijk bloed stroomt opnieuw door de coronairen. Het myocard begint te heractiveren. Reperfusieschade is een reëel risico: vrije radicalen-burst bij O₂-herlevering.</p>
+        <p>Het hart kan op drie manieren reageren:</p>
+        <ul style="font-size:0.87rem; line-height:1.9; margin:0 0 0.5rem 1.1rem; color:var(--text-muted)">
+          <li><strong>Sinusritme direct</strong> — ideaal, treedt op in ~50–60% van gevallen bij goede myocardprotectie</li>
+          <li><strong>Ventrikelfibrilleren (VF)</strong> — het hart trilt zonder effectieve contractie → interne defibrillatieschok (10–20 J) via directe paddles op het hart</li>
+          <li><strong>AV-blok / bradycardie</strong> → tijdelijke epicardiale pacemaker via pacer-draden die op het rechter ventrikel worden gehecht</li>
+        </ul>
+        <div class="step-detail"><strong>Reperfusietijd:</strong> de klem gaat los maar de HLM blijft nog draaien. Het hart herstelt. TEE controleert direct: beweegt de nieuwe klep goed? Is er paravalvulaire lekkage? Hoe contracteert het LV?</div>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--lav-lt)" style="background:var(--lavender)">10</div>
+      <div class="op-step-body">
+        <div class="step-name">Weaning van CPB en oncanuleren</div>
+        <div class="step-time">WEANING · ±110 min</div>
+        <p>Geleidelijke overdracht van pompfunctie van HLM naar het herstelde hart: het debiet van de HLM wordt verminderd terwijl het hart meer bloed pompt. Parameters: MAP, CVP, TEE (contractiliteit, vulling), lactaat, gaswaarden.</p>
+        <p>Bij succesvolle weaning: canules worden verwijderd. <strong>Protamine</strong> 1:1 ratio ten opzichte van heparine IV → heparine-effect geneutraliseerd. ACT-controle: terug naar basislijn. Hemostase: bloedende punten worden gecoaguleerd of gehecht.</p>
+        <div class="step-detail">Soms is inotroop support nodig (dobutamine, adrenaline) als het ventrikel moeite heeft over te nemen. Zelden is een intra-aortale ballonpomp (IABP) of mechanische assistentie nodig.</div>
+      </div>
+    </div>
+
+    <div class="op-step">
+      <div class="op-step-num" style="background:var(--navy-lt)">11</div>
+      <div class="op-step-body">
+        <div class="step-name">Wondverzorging en sternomsluiting</div>
+        <div class="step-time">AFSLUITING · 120–150 min</div>
+        <p>Drains worden achtergelaten in het pericardium en mediastinum (bloedafvloed en vroegtijdige signalering van nabloeding). Het pericardium wordt partieel gesloten (of open gelaten bij risico op tamponade). Het <strong>borstbeen wordt gesloten met staaldraad</strong> (6–8 lussen van 6-0 of 7-0 staaldraad) — dit zorgt voor sterke, rigide sluiting.</p>
+        <p>Spierlagen, subcutis en huid worden gelaagd gesloten. Wonddressing. Overdracht naar IC/CCU voor postoperatieve bewaking.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     09 · TAVI
+══════════════════════════════════════════════════════ -->
+<section id="tavi">
+<div class="container">
+  <div class="section-label">09 — TAVI: Transcatheter Aortaklep Implantatie</div>
+  <h2>De revolutie zonder open thorax.</h2>
+
+  <p>TAVI (ook: TAVR — Transcatheter Aortic Valve Replacement) is een percutane alternatieve methode voor aortaklepvervanging zonder sternotomie of HLM. Geïntroduceerd in 2002 door Prof. Alain Cribier (Rouen, FR), is TAVI inmiddels de meest uitgevoerde aortaklepvervanging in westerse landen.</p>
+
+  <div class="pull-quote">Bij TAVI wordt een bioprothese gekomprimeerd op een ballon of in een selfexpandable stent, via een katheter opgeschoven en ter plekke uitgevouwen — over de eigen, nog aanwezige klep heen.</div>
+
+  <div class="tavi-compare">
+    <div class="tavi-card">
+      <h3>🎯 Hoe werkt TAVI?</h3>
+      <p>De prothese wordt gecrimpt op een leveringssysteem (9–18 French katheter). Toegang via arteria femoralis (transfemoraal, meest gebruikt), a. subclavia, aorta ascendens (transaortaal) of linker ventrikel apex (transapicaal). Onder röntgendoorlichting en TEE-geleiding wordt de prothese gepositioneerd ter hoogte van de native aortaklep en vrijgelaten. De eigen kalk houdt de nieuwe klep op zijn plek.</p>
+    </div>
+    <div class="tavi-card">
+      <h3>✅ Voordelen TAVI vs. chirurgie</h3>
+      <p>Geen sternotomie, geen CPB, geen algemene anesthesie (lokaal+sedatie mogelijk). Kortere opnameduur (2–3 dagen vs. 7–10 dagen). Sneller herstel. Vergelijkbare resultaten bij hoog- en intermediair-risico patiënten. Inmiddels ook uitbreidend naar laag-risico patiënten (PARTNER 3, Evolut Low Risk trials).</p>
+    </div>
+    <div class="tavi-card">
+      <h3>⚠️ Beperkingen en risico's TAVI</h3>
+      <p>Paravalvulaire lekkage (meer dan bij chirurgie). Pacemaker-behoefte (10–25%, afhankelijk van systeem — met name bij RBBB). Vasculaire toegangscomplicaties. Stroketrisico peri-operatief. Geen data over lange termijn &gt;10–12 jaar. Valve-in-valve technisch lastiger bij kleine stents.</p>
+    </div>
+    <div class="tavi-card">
+      <h3>🔬 Welke patiënt voor TAVI?</h3>
+      <p>Hoog chirurgisch risico (EuroSCORE II &gt;10%, STS &gt;8%), of anatomisch/technisch ongeschikte kandidaat voor chirurgie, of patiënt die weigert. Inmiddels ook intermediair risico (Heart Team beslissing). Jonge patiënten (&lt;65j) nog steeds bij voorkeur chirurgie vanwege langetermijndata.</p>
+    </div>
+  </div>
+
+  <h3>Risicoscores die de beslissing sturen</h3>
+  <div class="risk-scores">
+    <div class="risk-score-card">
+      <div class="rs-name">EuroSCORE II</div>
+      <div class="rs-title">European System for Cardiac Operative Risk Evaluation</div>
+      <p>Gebaseerd op 22 variabelen. Voorspelt 30-dagenmortaliteit. Online calculator beschikbaar. Hoog: &gt;10%.</p>
+    </div>
+    <div class="risk-score-card">
+      <div class="rs-name">STS-PROM</div>
+      <div class="rs-title">Society of Thoracic Surgeons Score</div>
+      <p>Amerikaanse tegenhanger. Hoog: &gt;8%. Soms afwijkend van EuroSCORE voor specifieke populaties.</p>
+    </div>
+    <div class="risk-score-card">
+      <div class="rs-name">Frailty</div>
+      <div class="rs-title">Kwetsbaarheidsscore</div>
+      <p>Gait speed, grip strength, BMI, albumine. Frailty onvoldoende gevangen in bovenstaande scores maar sterk voorspellend voor uitkomst.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     10 · COMPLICATIES
+══════════════════════════════════════════════════════ -->
+<section id="complicaties">
+<div class="container">
+  <div class="section-label">10 — Complicaties van aortaklepvervanging</div>
+  <h2>Wat kan er misgaan?</h2>
+
+  <p>Geïsoleerde aortaklepvervanging heeft een uitstekende veiligheidsrecord. 30-dagenmortaliteit in electieve setting bij laag-risico patiënten: <strong>1–2%</strong>. Complicaties zijn echter relevant voor gedeelde besluitvorming met de patiënt.</p>
+
+  <div class="comp-grid">
+    <div class="comp-card" style="border-color:var(--blood-mid)">
+      <div class="comp-name">Beroerte (CVA)</div>
+      <div class="comp-pct" style="color:var(--blood-mid)">1–3%</div>
+      <p>Trombo-embolie of lucht via aortamanipulatie. Cerebraal beschermingsfilter (Sentinel device) wordt soms gebruikt bij TAVI.</p>
+    </div>
+    <div class="comp-card" style="border-color:var(--gold)">
+      <div class="comp-name">Paravalvulaire lekkage</div>
+      <div class="comp-pct" style="color:var(--gold)">Chirurgie &lt;1% · TAVI 5–15%</div>
+      <p>Bloedstroom langs de prothese door onvoldoende afsluiting anulus. Ernstige PVL: hemolyse, hartfalen.</p>
+    </div>
+    <div class="comp-card" style="border-color:var(--lavender)">
+      <div class="comp-name">Pacemaker-behoefte</div>
+      <div class="comp-pct" style="color:var(--lavender)">Chirurgie &lt;5% · TAVI 10–25%</div>
+      <p>AV-geleidingsstoornis door oedeem of directe laesie van HIS-bundel ter hoogte van non-coronary cusp / membraneuze septum.</p>
+    </div>
+    <div class="comp-card" style="border-color:var(--teal)">
+      <div class="comp-name">Nabloeding / rethoracotomie</div>
+      <div class="comp-pct" style="color:var(--teal)">2–5%</div>
+      <p>Postoperatief bloedverlies via drains &gt;300 mL/uur gedurende 3 uur → indicatie voor rethoracotomie. Hemolyse of coagulopathie als oorzaak.</p>
+    </div>
+    <div class="comp-card" style="border-color:var(--sage)">
+      <div class="comp-name">Nierfalen (AKI)</div>
+      <div class="comp-pct" style="color:var(--sage)">5–15%</div>
+      <p>CPB-gerelateerde inflammatie, hemodynamische instabiliteit, contrastmiddelen (diagnostiek). Ernstige AKI (dialyse) bij 1–3%.</p>
+    </div>
+    <div class="comp-card" style="border-color:var(--navy)">
+      <div class="comp-name">Prosthetic Valve Endocarditis</div>
+      <div class="comp-pct" style="color:var(--navy)">0,5–1%/jaar</div>
+      <p>Levenslang risico. Streptokokken, stafylokokken. Behandeling: antibiotica en vaak heroperatie. Mortaliteit hoog.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     11 · CASUS
+══════════════════════════════════════════════════════ -->
+<section id="casus">
+<div class="container">
+  <div class="section-label">11 — Klinische casus</div>
+  <h2>Jouw beslissing aan de Heart Team-tafel.</h2>
+
+  <p>Je zit in het multidisciplinair Heart Team overleg. De volgende patiënt wordt gepresenteerd. Wat beslis je?</p>
+
+  <div class="casus-box">
+    <h3>Patiëntpresentatie</h3>
+    <div class="casus-data">
+      <span class="cd-label">Patiënt</span>
+      <span class="cd-val">Man, 72 jaar. Actief leven, fietst dagelijks, werkt nog halve dagen als leraar.</span>
+      <span class="cd-label">Klachten</span>
+      <span class="cd-val">Toenemende dyspnoe bij inspanning (NYHA II→III over 8 maanden). Één episode van bijna-flauwvallen op de fiets. Geen angina.</span>
+      <span class="cd-label">Echocardiografie</span>
+      <span class="cd-val">Ernstige calcificerende aortaklepstenose. AVA 0,75 cm². ΔPmean 52 mmHg. Vmax 4,8 m/s. EF 58%. Graad I diastolische dysfunctie. Geen mitraallijden.</span>
+      <span class="cd-label">Coronair angiogram</span>
+      <span class="cd-val">Geen significante coronairlijden (TIMI III flow alle vaten).</span>
+      <span class="cd-label">CT-aorta</span>
+      <span class="cd-val">Bicuspide aortaklep (type 1 fusie L-R cusp). Annulusdiameter 24mm. Iliofemorale trajecten gunstig (minimaal calcificatie, adequate diameter). Calcificatiescore klep: hoog (Agatston &gt;3000).</span>
+      <span class="cd-label">Comorbiditeit</span>
+      <span class="cd-val">Hypertensie (goed gecontroleerd). Geen diabetes. GFR 68 mL/min/1,73m². Lichte COPD (GOLD I).</span>
+      <span class="cd-label">EuroSCORE II</span>
+      <span class="cd-val">2,4% — laag chirurgisch risico.</span>
+    </div>
+  </div>
+
+  <div class="casus-questions">
+    <div class="cq">
+      <div class="cq-num">01</div>
+      <div class="cq-q">Is er een operatie-indicatie?</div>
+      <p>Zoek de ESC-klasse. Let op: AVA-waarde, gradient én symptomen. Hoe erg zijn de klachten (NYHA)? Wat is de verwachte prognose zonder ingreep?</p>
+    </div>
+    <div class="cq">
+      <div class="cq-num">02</div>
+      <div class="cq-q">TAVI of chirurgische klepvervanging?</div>
+      <p>EuroSCORE II is laag (2,4%). Anatomie gunstig voor beide opties. Bicuspide klep — wat betekent dit voor TAVI? Leeftijd 72j — welke lange termijn data overweeg je?</p>
+    </div>
+    <div class="cq">
+      <div class="cq-num">03</div>
+      <div class="cq-q">Mechanisch of biologisch? En welke maat?</div>
+      <p>72 jaar: vuistregel zegt biologisch. Maar: actief, goede therapietrouw. Wat weegt zwaarder? Annulusdiameter 24mm — welke prothesemaat verwacht je? Overweeg: patient-prosthesis mismatch.</p>
+    </div>
+  </div>
+
+  <div class="casus-answer">
+    <div class="ans-label">Bespreking — richtlijn-gebaseerde aanpak</div>
+    <p style="font-size:0.88rem; color:rgba(255,255,255,0.8); margin-bottom:0.7rem"><strong style="color:var(--gold-lt)">Indicatie (ESC Klasse I):</strong> Symptomatische ernstige aortaklepstenose (AVA &lt;1,0 cm², ΔPmean &gt;40 mmHg, syncope, NYHA III-klachten). Zonder ingreep: gemiddelde overleving &lt;2 jaar. Indicatie onomstreden.</p>
+    <p style="font-size:0.88rem; color:rgba(255,255,255,0.8); margin-bottom:0.7rem"><strong style="color:var(--gold-lt)">TAVI vs. chirurgie:</strong> EuroSCORE II 2,4% pleit voor chirurgie. Bicuspide anatomie geeft verhoogd risico op paravalvulaire lekkage en misplaatsing bij TAVI (ct-anatomie moet zorgvuldig beoordeeld worden; bij type 0 BAV wordt TAVI afgeraden). CT toont hoge calcificatiescore — TAVI technisch uitdagend. Heart Team preferentie: chirurgische AVR. Toch: bij sterk patiëntenvoorkeur voor TAVI na counseling, is dit in gespecialiseerd centrum acceptabel.</p>
+    <p style="font-size:0.88rem; color:rgba(255,255,255,0.8); margin:0"><strong style="color:var(--gold-lt)">Klepkeuze:</strong> 72 jaar → biologisch (ESC klasse IIa). Levensverwachting ~15 jaar; biologische klep houdt vermoedelijk de rest van het leven mee. Annulus 24mm → prothese maat 23 of 25. Controleer EOA (effectief klepoppervlak) t.o.v. lichaamsoppervlak om patient-prosthesis mismatch te voorkomen.</p>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p style="margin-bottom:6px">Aortaklepvervanging — Medische onderwijsinfographic · Cardiochirurgie</p>
+  <p>Inhoud gebaseerd op ESC Guidelines 2021, ACC/AHA Guidelines 2021, Kirklin & Barratt-Boyes Cardiac Surgery</p>
+  <p style="margin-top:6px; opacity:0.4">BKO Onderwijsmodule · Academisch Medisch Centrum · Niet voor klinisch gebruik — uitsluitend onderwijsdoeleinden</p>
+</footer>
+
+<script>
+// Scroll-based nav highlighting
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.color = link.getAttribute('href') === '#' + entry.target.id
+          ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.45)';
+        link.style.borderBottomColor = link.getAttribute('href') === '#' + entry.target.id
+          ? '#E74C3C' : 'transparent';
+      });
+    }
+  });
+}, { threshold: 0.25, rootMargin: '-60px 0px 0px 0px' });
+
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
